@@ -22,7 +22,9 @@
 body {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
+  font-size: 1.1rem;
+
   line-height: 1.5;
   color: var(--text);
 }
@@ -60,7 +62,8 @@ h3 {
   font-weight: bold;
 }
 
-h3 {
+h4 {
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -225,7 +228,7 @@ header {
 }
 
 
-/* Works */
+/* ---------- Works ---------- */
 .works-section-box {
   /* display: flex;
   justify-content: flex-start;
@@ -240,7 +243,7 @@ header {
   max-width: 15rem;
 } */
 
-/* ---------- works grids ---------- */
+/* ---------- Works grids ---------- */
 
 .grid {
   display: grid;

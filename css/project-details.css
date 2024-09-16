@@ -35,7 +35,7 @@
 .accordion-content {
     display: none;
     /* padding: 10px; */
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .accordion-content[aria-hidden="false"] {
@@ -58,6 +58,32 @@
 
 .clickable-image:focus {
     outline: 2px solid #777;
+}
+
+/* Style for the clickable text */
+.click-to-enlarge {
+    margin: 5px;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.click-to-enlarge:hover, .click-to-enlarge:focus {
+    text-decoration: none;
+    outline: 2px solid #007BFF;
+}
+
+/* Image container to group the image and the text */
+.image-container {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    outline: none; /* Remove default outline */
+}
+
+.image-container:focus {
+    outline: 2px solid #007BFF; /* Custom focus outline */
 }
 
 /* Modal (background) */
@@ -108,7 +134,6 @@
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-    outline: 2px solid #fff; /* Highlight on focus */
 }
 
 /* Zoom animation */

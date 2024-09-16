@@ -36,8 +36,8 @@ var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
-// Get all images with the 'clickable-image' class
-var images = document.getElementsByClassName("clickable-image");
+// Get all image containers (each contains an image and a "Click to enlarge" text)
+var containers = document.getElementsByClassName("image-container");
 
 // Get the close button
 var closeBtn = document.getElementsByClassName("close")[0];
@@ -50,30 +50,29 @@ function getFocusableElements() {
     return modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
 }
 
-// Add click event listener to each image
-for (var i = 0; i < images.length; i++) {
-    images[i].onclick = function() {
-        lastFocusedElement = document.activeElement; // Store the last focused element
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        modalImg.alt = this.alt;
-        captionText.innerHTML = this.alt;
-        closeBtn.focus(); // Set focus on the close button when the modal opens
-        trapFocus(modal); // Activate focus trap
+// Add click and keyboard event listeners to each container (image and text)
+for (var i = 0; i < containers.length; i++) {
+    containers[i].onclick = function() {
+        openModal(this);
     }
     
-    // Also make the images clickable using Enter key for better accessibility
-    images[i].addEventListener('keydown', function(event) {
+    containers[i].addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            lastFocusedElement = document.activeElement; // Store the last focused element
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            modalImg.alt = this.alt;
-            captionText.innerHTML = this.alt;
-            closeBtn.focus(); // Set focus on the close button when the modal opens
-            trapFocus(modal); // Activate focus trap
+            openModal(this);
         }
     });
+}
+
+// Function to open the modal
+function openModal(container) {
+    lastFocusedElement = document.activeElement; // Store the last focused element
+    var img = container.querySelector('.clickable-image');
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+    captionText.innerHTML = img.alt;
+    closeBtn.focus(); // Set focus on the close button when the modal opens
+    trapFocus(modal); // Activate focus trap
 }
 
 // Close the modal when the user clicks on <span> (X) or outside the image
