@@ -1,0 +1,396 @@
+/* import font Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  --background: #ffffff;
+  --grey: #f5f5f5;
+  --text: #383838;
+  --text-onmouse: #000000;
+  --link: #1E529B;
+  --link-onmouse: #113669;
+  --yellow: rgb(255, 216, 60);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  outline: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* apply page width to all sections */
+.page-width {
+  margin: auto;
+  width: 70%;
+  max-width: 70rem;
+}
+
+.grey-background {
+  background-color: var(--grey);
+}
+
+.section-margin-padding {
+  margin: 1rem auto;
+  padding: 2rem 0;
+}
+
+/* headings */
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p,
+ul {
+  max-width: 50ch;
+  margin: 0.5rem 0;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.link-text {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.link-text:hover,
+.link-text:focus {
+  color: var(--link-onmouse);
+  text-decoration: none;
+}
+
+
+.side-image {
+  width: 100%;
+  max-width: 20rem;
+  /* width: 25rem; */
+  /* max-height: 20rem; */
+  border-radius: 1rem;
+  /* flex-shrink: 2; */
+}
+
+
+.transition {
+  transition-duration: 100ms;
+}
+
+/* reset the link decorations */
+a {
+  text-decoration: none;
+}
+
+/* ---------- Flex layout ---------- */
+.flex-layout-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.reverse-direction {
+  flex-direction: row-reverse;
+}
+
+/* for tables */
+@media only screen and (max-width: 767px) {
+
+  .flex-layout-container {
+    flex-wrap: wrap;
+  }
+
+
+  .reverse-direction {
+    flex-direction: row;
+  }
+}
+
+
+
+/* Skip link */
+#skip-link {
+  padding: 1.5rem 2rem;
+  /* width: 100%; */
+
+  border: var(--text-onmouse) solid 0.25rem;
+  border-radius: 1rem;
+  color: var(--text);
+  background-color: var(--yellow);
+  position: relative;
+  top: -4rem;
+  /* top: 2rem */
+  left: 1rem;
+}
+
+#skip-link:focus {
+  top: 2rem;
+}
+
+
+/* ---------- Header ---------- */
+header {
+  /* margin-top: 2.5rem; */
+  /* padding: 1.25rem 0; */
+  /* background-color: pink; */
+}
+
+/* title and navigation */
+#header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  align-items: center;
+}
+
+/* page title also h1 */
+#title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text);
+  border-bottom: solid 0.25rem transparent;
+
+}
+
+#title:focus,
+#title:hover {
+  color: var(--text-onmouse);
+  border-bottom: solid 0.25rem var(--text-onmouse);
+  background-color: var(--yellow);
+}
+
+#navigation-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link-text {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  border-bottom: solid 0.25rem transparent;
+}
+
+.nav-link-text:hover,
+.nav-link-text:focus {
+  border-bottom: solid 0.25rem var(--text-onmouse);
+  color: var(--text-onmouse);
+  background-color: var(--yellow);
+}
+
+/* Halo section */
+#halo-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem 2rem;
+}
+
+#halo-my-name-section {
+  /* width: 100%; */
+  /* outline: 1px solid black; */
+  /* flex-shrink: 2; */
+}
+
+/* banana image for the homepage, and project image for the rest */
+.top-image {
+  width: 100%;
+  max-width: 25rem;
+  border-radius: 1rem;
+
+}
+
+
+/* Works */
+.works-section-box {
+  /* display: flex;
+  justify-content: flex-start;
+  gap: 2rem; */
+  margin: 1rem 0;
+  padding: 2rem 0;
+  /* border: 1px green solid; */
+}
+
+/* make the bear image a bit smaller */
+/* #bear-image {
+  max-width: 15rem;
+} */
+
+/* ---------- works grids ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 2rem;
+}
+
+.grid-card {
+  background-color: var(--background);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 0.125rem var(--text) solid;
+  cursor: pointer;
+}
+
+.grid-card:hover,
+.grid-card:focus {
+  padding: 2rem;
+  /* border: 0.25rem var(--text) solid; */
+  outline: 0.25rem var(--yellow) solid;
+  cursor: pointer;
+}
+
+/* .grid-card:hover h4, .grid-card:focus h4
+{
+text-decoration: underline;
+} */
+
+.grid-card:hover .link-text,
+.grid-card:focus .link-text {
+  text-decoration: none;
+}
+
+.work-images {
+  width: 100%;
+  border-radius: 0.5rem;
+  /* margin-top: 1rem; */
+}
+
+.grid-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.arrows {
+  width: 100%;
+  max-width: 1.5rem;
+  /* position: relative;
+  top: 0; */
+}
+
+/* ---------- About me section ----------*/
+#about-me {
+  /* display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+
+
+  gap: 2rem 2rem; */
+}
+
+
+/* Contact */
+
+#contact {
+  /* display: flex;
+  justify-content: space-between;
+  gap: 2rem 2rem; */
+}
+
+/* contact information is set as a list */
+#contact-list {
+  list-style: none;
+}
+
+#contact-list li {
+  margin: 0.3rem 0;
+}
+
+.contact-link {
+  color: var(--link);
+  font-weight: bold;
+  margin-left: 0.5rem;
+
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--link-onmouse);
+  border-bottom: var(--link-onmouse) solid 0.25rem;
+  background-color: var(--yellow);
+}
+
+.icon {
+  height: 1.25rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  /* give some space on the bottom */
+  min-height: 40vh;
+  /* background-color: lightblue; */
+}
+
+
+/* for smaller desktops */
+@media only screen and (max-width: 1024px) {
+
+  .page-width {
+    margin: auto;
+    width: 80%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* for tables */
+@media only screen and (max-width: 767px) {
+
+  /* #halo-section,
+  #about-me,
+  .works-section-box,
+  #contact {
+    flex-wrap: wrap;
+  } */
+
+
+}
+
+/* for mobile */
+@media only screen and (max-width: 480px) {
+
+  .page-width {
+    margin: auto;
+    width: 92%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .reverse-direction {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+ */
