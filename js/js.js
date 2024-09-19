@@ -132,3 +132,5 @@ closeBtn.addEventListener('keydown', function(event) {
         closeModal(); // Close modal when Enter or Space is pressed on close button
     }
 });
+
+

@@ -70,7 +70,7 @@ h4 {
 p,
 ul {
   max-width: 50ch;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 ul {
@@ -397,3 +397,6 @@ footer {
   justify-content: flex-end;
 }
  */
+
+ /* ---------- Switch ---------- */
+ 
