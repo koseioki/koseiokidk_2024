@@ -82,20 +82,23 @@ ul {
   text-decoration: underline;
 }
 
-.link-text:hover,
-.link-text:focus {
+.link-text:hover {
   color: var(--link-onmouse);
   text-decoration: none;
+
+}
+
+.link-text:focus {
+  background-color: var(--yellow);
+  color: var(--link-onmouse);
+
 }
 
 
 .side-image {
   width: 100%;
   max-width: 20rem;
-  /* width: 25rem; */
-  /* max-height: 20rem; */
   border-radius: 1rem;
-  /* flex-shrink: 2; */
 }
 
 
@@ -103,7 +106,6 @@ ul {
   transition-duration: 100ms;
 }
 
-/* reset the link decorations */
 a {
   text-decoration: none;
 }
@@ -120,20 +122,12 @@ a {
   flex-direction: row-reverse;
 }
 
-/* for tables */
-@media only screen and (max-width: 767px) {
-
-  .flex-layout-container {
-    flex-wrap: wrap;
-  }
 
 
-  .reverse-direction {
-    flex-direction: row;
-  }
+hr{
+  color: var(--text);
+  margin: 2rem 0;
 }
-
-
 
 /* Skip link */
 #skip-link {
@@ -196,6 +190,7 @@ header {
   text-decoration: none;
   color: var(--text);
   font-weight: bold;
+  font-size: 1.25rem;
   border-bottom: solid 0.25rem transparent;
 }
 
@@ -229,19 +224,6 @@ header {
 
 
 /* ---------- Works ---------- */
-.works-section-box {
-  /* display: flex;
-  justify-content: flex-start;
-  gap: 2rem; */
-  margin: 1rem 0;
-  padding: 2rem 0;
-  /* border: 1px green solid; */
-}
-
-/* make the bear image a bit smaller */
-/* #bear-image {
-  max-width: 15rem;
-} */
 
 /* ---------- Works grids ---------- */
 
@@ -268,10 +250,6 @@ header {
   cursor: pointer;
 }
 
-/* .grid-card:hover h4, .grid-card:focus h4
-{
-text-decoration: underline;
-} */
 
 .grid-card:hover .link-text,
 .grid-card:focus .link-text {
@@ -300,16 +278,11 @@ text-decoration: underline;
 
 /* ---------- About me section ----------*/
 #about-me {
-  /* display: flex;
-  justify-content: flex-end;
-  flex-direction: row-reverse;
 
-
-  gap: 2rem 2rem; */
 }
 
 
-/* Contact */
+/* ---------- Contact ---------- */
 
 #contact {
   /* display: flex;
@@ -323,7 +296,7 @@ text-decoration: underline;
 }
 
 #contact-list li {
-  margin: 0.3rem 0;
+  margin: 0.8rem 0;
 }
 
 .contact-link {
@@ -353,8 +326,9 @@ footer {
 }
 
 
-/* for smaller desktops */
-@media only screen and (max-width: 1024px) {
+
+/* ---------- For smaller desktops ---------- */
+@media only screen and (max-width: 1200px) {
 
   .page-width {
     margin: auto;
@@ -364,22 +338,28 @@ footer {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+
+
 }
 
-/* for tables */
+/* For tables */
 @media only screen and (max-width: 767px) {
 
-  /* #halo-section,
-  #about-me,
-  .works-section-box,
-  #contact {
+  .flex-layout-container {
     flex-wrap: wrap;
-  } */
+  }
 
 
+  .reverse-direction {
+    flex-direction: row;
+  }
+
+    .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* for mobile */
+/* ---------- For mobiles ---------- */
 @media only screen and (max-width: 480px) {
 
   .page-width {
@@ -392,53 +372,55 @@ footer {
   }
 }
 
-/* .reverse-direction {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
- */
 
  /* ---------- Switch --------- */
  [role="switch"] {
-  margin: 2px;
-  padding: 4px 4px 8px 8px;
-  border: 0 solid #005a9c;
-  border-radius: 5px;
-  width: 15em;
+  /* margin: 2px; */
+  /* padding: 4px 4px 8px 8px; */
+  padding: 1rem;
+  border: 0 solid var(--yellow);
+  border-radius: 1rem;
+  /* width: 15rem; */
+  width: 100%;
   user-select: none;
 }
 
 [role="switch"] .label {
   display: inline-block;
-  width: 8em;
+  /* width: 8em; */
+  /* width: 0.5rem; */
 }
 
 [role="switch"] .switch {
   position: relative;
   display: inline-block;
-  top: 6px;
-  border: 2px solid black;
-  border-radius: 12px;
-  height: 20px;
-  width: 40px;
+  /* top: 6px; */
+  top: 0.375rem;
+  border: 2px solid var(--text);
+  /* border-radius: 12px; */
+  border-radius: 1rem;
+  /* height: 20px; */
+  /* width: 40px; */
+  height: 1.25rem;
+  width: 2.5rem;
 }
 
 [role="switch"] .switch span {
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 0.125rem;
+  left: 0.125rem;
   display: inline-block;
-  border: 2px solid black;
-  border-radius: 8px;
-  height: 12px;
-  width: 12px;
-  background: black;
+  border: 0.125rem solid var(--text);
+  border-radius: 0.5rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  background: var(--text);
 }
 
 [role="switch"][aria-checked="true"] .switch span {
-  left: 21px;
-  background: green;
-  border-color: green;
+  left: 1.3125rem;
+  background: var(--link);
+  border-color: var(--link);
 }
 
 [role="switch"] .on {
@@ -459,15 +441,16 @@ footer {
 
 [role="switch"]:focus,
 [role="switch"]:hover {
-  padding: 2px 2px 6px 6px;
-  border-width: 2px;
-  outline: none;
-  background-color: #def;
+  /* padding: 2px 2px 6px 6px; */
+  /* border-width: 0.125rem; */
+  /* border: 0.125rem solid var(--grey); */
+  outline: 0.125rem solid var(--yellow);
+  background-color: var(--grey);
   cursor: pointer;
 }
 
 [role="switch"]:focus span.switch {
-  background-color: white;
+  background-color: var(--background);
 }
 
 /* Image toggle container */
@@ -477,7 +460,7 @@ footer {
 
 .toggle-image {
   display: none;
-  width: 300px; /* Adjust width as per your image size */
+  /* width: 300px; */
   height: auto;
 }
 
