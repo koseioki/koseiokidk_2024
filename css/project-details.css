@@ -46,45 +46,49 @@
 /* ---------- Clickable images ---------- */
 /* Style for the images */
 .clickable-image {
-    width: 200px;
-    margin: 10px;
-    cursor: pointer;
-    border: 2px solid #ddd;
-    transition: 0.3s;
+    width: 20rem;
+    /* margin: 1rem; */
+    cursor: zoom-in;
+    /* border: 2px solid #ddd; */
+    border: 0.125rem var(--text) solid;
+    border-radius: 1rem;
+    /* transition: 0.3s; */
 }
 
-.clickable-image:hover {
-    border-color: #777;
-}
-
+.clickable-image:hover,
 .clickable-image:focus {
+    border-color: var(--text-onmouse);
     outline: 2px solid #777;
+    outline: 0.25rem var(--yellow) solid;
 }
 
 /* Style for the clickable text */
 .click-to-enlarge {
-    margin: 5px;
-    color: #007BFF;
+    /* margin: 5px; */
+    color: var(--link);
     cursor: pointer;
-    font-size: 14px;
+    /* font-size: 14px; */
     text-decoration: underline;
 }
 
 .click-to-enlarge:hover, .click-to-enlarge:focus {
     text-decoration: none;
-    outline: 2px solid #007BFF;
+    /* outline: 2px solid #007BFF; */
+    color: var(--link-onmouse);
 }
 
 /* Image container to group the image and the text */
 .image-container {
     display: inline-block;
-    margin: 10px;
+    padding: 1rem;
     cursor: pointer;
     outline: none; /* Remove default outline */
 }
 
 .image-container:focus {
-    outline: 2px solid #007BFF; /* Custom focus outline */
+    outline: 0.25rem solid var(--link);
+    /* border: 0.125rem solid var(--text-onmouse);
+    outline: 0.25rem var(--yellow) solid; */
 }
 
 /* Modal (background) */
@@ -92,7 +96,7 @@
     display: none; /* Hidden by default */
     position: fixed; 
     z-index: 1; 
-    padding-top: 100px;
+    padding-top: 6.25rem;
     left: 0;
     top: 0;
     width: 100%; 
@@ -106,7 +110,7 @@
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 43.75rem;
 }
 
 /* Caption of modal image */
@@ -114,27 +118,30 @@
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
+    max-width: 43.75rem;
+    text-align: left;
+    color: var(--background);
+    padding: 1rem 0;
 }
 
 /* Close button (X) */
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
+    top: 2rem;
+    right: 2rem;
+    color: var(--background);
+    font-size: 2.5;
     font-weight: bold;
     cursor: pointer;
 }
 
 .close:hover, .close:focus {
-    color: #bbb;
+    /* color: #bbb; */
     text-decoration: none;
     cursor: pointer;
+    outline: 0.25rem solid var(--background);
+    outline-offset: 1rem;
+
 }
 
 /* Zoom animation */

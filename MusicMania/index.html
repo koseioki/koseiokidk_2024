@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NWEM13QQT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3NWEM13QQT');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Halo, my name is Kosei I’m an inclusive multimedia designer, intersectionalist, percussionist.">
+    <title>MusicMania - Kosei Oki</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-details.css">
+</head>
+
+<body>
+    <!-- Skip link -->
+    <a id="skip-link" class="transition" href="#main-content">Skip to Content</a>
+
+    <!-- Header -->
+    <header class="page-width section-margin-padding">
+        <div id="header-container">
+            <a id="title" href="../" class="transition">Kosei Oki</a>
+            <nav id="navigation-links">
+                <a href="../#works" class="nav-link-text transition">Works</a>
+                <a href="../#about-me" class="nav-link-text transition">About me</a>
+                <a href="../#contact" class="nav-link-text transition">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal" tabindex="-1">
+            <span class="close" tabindex="0">&times;</span>
+            <img class="modal-content" id="img01" alt="">
+            <div id="caption"></div>
+        </div>
+
+        <!-- Project title -->
+        <section class="page-width section-margin-padding flex-layout-container">
+            <div>
+                <h1>MusicMania</h1>
+                <p><span aria-hidden="true">🕒 </span>3 weeks, team of 4</p>
+
+                <h2>Project Description</h2>
+                <p>
+                    We built a web store that sells music equipment using WordPress and WooCommerce. Our goal was to
+                    ensure good usability and accessibility, allowing users to easily find what they are looking for.
+                </p>
+
+                <a class="link-text" href="https://shop.mjkieldsen.com">Visit MusicMania (external link)</a>
+            </div>
+            <div>
+                <img class="top-image" src="../images/musicmania.webp" alt="">
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+        <div class="grey-background">
+            <section class="page-width section-margin-padding">
+
+                <h2>Research on Existing Products</h2>
+
+
+
+                <p>We looked at other online stores that sell musical instruments to get ideas for our own website in
+                    order to make our webshop feel familiar to users, and figure out what elements we should include.
+                    We mainly looked for thomann.de, digitalpiano.com, and musik-produktiv.com.</p>
+
+
+                <div class="accordion" role="tablist">
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading1" aria-expanded="false"
+                                aria-controls="content1">
+                                <span aria-hidden="true">⏷</span> Homepage
+                            </button>
+                        </h3>
+                        <div id="content1" class="accordion-content" role="region" aria-labelledby="heading1">
+                            <p>
+                                For the homepage, we examined the layout, common elements, and the main navigation. The
+                                navigation typically includes a logo on the top left, a search bar in the centre, and
+                                account and cart options on the right. Below, there’s usually a category list. Most
+                                websites feature either a carousel or a hero image right below the header.
+                            </p>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/homepage.webp" alt="A screenshot of the homepage of Thomann.de">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading2" aria-expanded="false"
+                                aria-controls="content2">
+                                <span aria-hidden="true">⏷</span> Category pages
+                            </button></h3>
+                        <div id="content2" class="accordion-content" role="region" aria-labelledby="heading2">
+
+                            <p>
+                                On category pages, there’s a sidebar for product filtering, where users can refine their
+                                search by brand, price, stock availability, colour, ratings, and category-specific
+                                attributes like the number of keys for a piano. Product listings display the name,
+                                image, price, and reviews.
+                            </p>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/category-pages.webp" alt="A screenshot of the category page of digital piano dot com">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading3" aria-expanded="false"
+                                aria-controls="content3">
+                                <span aria-hidden="true">⏷</span> Product pages
+                            </button></h3>
+                        <div id="content3" class="accordion-content" role="region" aria-labelledby="heading3">
+                            <p>On product pages, you’ll find the product name, images, price, and an “add to cart”
+                                button.
+                                Some pages may include audio or video content. Below, there are usually detailed product
+                                specifications and related items.</p>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/product-pages.webp" alt="A screenshot of the product page of musik productiv dot com">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="page-width section-margin-padding">
+
+
+            <h2>Information Architecture and Tree Testing</h2>
+
+
+
+            <p>We categorised the products based on our research of how the other websites categorise them. After that,
+                we conducted a tree test, made adjustments, and then did another tree test to ensure it was good to
+                proceed.</p>
+
+
+            <div class="accordion" role="tablist">
+
+                <div class="accordion-item">
+                    <h3><button class="accordion-header" id="heading4" aria-expanded="false" aria-controls="content4">
+                            <span aria-hidden="true">⏷</span> Tree testing 1st round
+                        </button>
+                    </h3>
+                    <div id="content4" class="accordion-content" role="region" aria-labelledby="heading4">
+                        <p>
+                            In the first round, we organised the product and information pages into 5 main categories.
+                            The feedback indicated that participants generally found what they were looking for, but
+                            many struggled to locate the “Beginners’ guide,” which was hidden under “Articles.”
+                        </p>
+                        <div class="image-container" tabindex="0">
+                            <img class="clickable-image" src="../images/musicmania/tree-testing-1.webp" alt="A screenshot of the tree testing structure, displaying Home at the top, with categories underneath such as Guitars, Keyboards, Drums, About Us, and more">
+                            <p class="click-to-enlarge">Click to enlarge</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3><button class="accordion-header" id="heading5" aria-expanded="false" aria-controls="content5">
+                            <span aria-hidden="true">⏷</span> Tree testing 2nd round
+                        </button></h3>
+                    <div id="content5" class="accordion-content" role="region" aria-labelledby="heading5">
+
+                        <p>
+                            In the second round of testing, we relocated the “Beginners’ guide” to the navigation bar
+                            and added an “All products” category. Additionally, we merged “Microphones” and “Headphones”
+                            under “Accessories.”
+                        </p>
+                        <div class="image-container" tabindex="0">
+                            <img class="clickable-image" src="../images/musicmania/tree-testing-2.webp" alt="A sample of the tasks that states, You want to start learning drums. Where would you find classes?">
+                            <p class="click-to-enlarge">Click to enlarge</p>
+                        </div>
+                        <p>
+                            Most participants successfully navigated the updated layout. Although a few encountered
+                            difficulties, such as in task 4 in the image, we deemed it acceptable since there’s a link
+                            to “Online lessons” on the “Beginners’ guide” page.</p>
+                        <div class="image-container" tabindex="0">
+                            <img class="clickable-image" src="../images/musicmania/tree-testing-3.webp" alt="The result of the test shows that most participants were able to navigate to the drum lessons page via the Online Lessons page. However, one participant ended up on the Beginner's Guide page and got stuck there, unable to find the correct path">
+                            <p class="click-to-enlarge">Click to enlarge</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <div class="grey-background">
+            <section class="page-width section-margin-padding">
+
+                <h2>Accessibility and WCAG 2.2</h2>
+
+
+
+                <p>Since we used a Content Management System (CMS) to build this website—specifically WordPress and
+                    WooCommerce—our ability to fully implement accessibility is somewhat limited due to the extent to
+                    which we can edit the platform. However, we have made efforts to make the product as inclusive as
+                    possible, regardless of users' abilities. We followed WCAG 2.2 guidelines as a reference for
+                    implementing accessibility.</p>
+
+
+                <div class="accordion" role="tablist">
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading6" aria-expanded="false"
+                                aria-controls="content6">
+                                <span aria-hidden="true">⏷</span> Keyboard Navigation and Focus states
+                            </button>
+                        </h3>
+                        <div id="content6" class="accordion-content" role="region" aria-labelledby="heading6">
+                            <p>
+                                We added clear outlines to focused elements using custom CSS in WordPress (2.4.7 Focus
+                                Visible).
+                                
+                            </p>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/keyboard-focus.webp" alt="A screenshot of the dropdown menu, highlighted with a black outline">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading7" aria-expanded="false"
+                                aria-controls="content7">
+                                <span aria-hidden="true">⏷</span> Link purpose
+                            </button></h3>
+                        <div id="content7" class="accordion-content" role="region" aria-labelledby="heading7">
+
+                            <p>
+                                We were unable to add an aria-label to the 'Read more' link button (2.4.4 Link Purpose
+                                in Context) on the homepage due to limitations. However, WooCommerce automatically adds
+                                product titles to the 'Add to cart' buttons.
+                            </p>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/read-more.webp" alt="A Read More button overlaid on the hero image">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/link-purpose.webp" alt="A screenshot of the VoiceOver links, where each link includes not only Add to Cart but also specifies the product names">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading8" aria-expanded="false"
+                                aria-controls="content8">
+                                <span aria-hidden="true">⏷</span> Dual coding
+                            </button></h3>
+                        <div id="content8" class="accordion-content" role="region" aria-labelledby="heading8">
+                            <p>
+                                Although this is not explicitly stated in WCAG 2.2, we implemented dual coding on various
+                                page elements by combining text with images to enhance understandability.
+                            </p>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/dual-coding-1.webp" alt="A screenshot of the categories section, where the Guitar slash Bass category has an image of a guitar next to it, and the Headphones category has an image of headphones beside it">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/dual-coding-2.webp" alt="The text says 16 in stock accompanied by a smiley face icon, both in green color">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading9" aria-expanded="false"
+                                aria-controls="content9">
+                                <span aria-hidden="true">⏷</span> Alt text
+                            </button></h3>
+                        <div id="content9" class="accordion-content" role="region" aria-labelledby="heading9">
+                            <p>
+                                Due to the limited project timeline, we were unable to fully implement alt texts
+                                (1.1.1Non-text Content). However, we are aware of how crucial it is to include them.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3><button class="accordion-header" id="heading10" aria-expanded="false"
+                                aria-controls="content10">
+                                <span aria-hidden="true">⏷</span> Colour contrast
+                            </button></h3>
+                        <div id="content10" class="accordion-content" role="region" aria-labelledby="heading10">
+                            <p>
+                                We ensured that the accent colour has a contrast ratio of at least 4.5:1 against the
+                                background colour (1.4.3 Contrast - Minimum).
+                            </p>
+                            <div class="image-container" tabindex="0">
+                                <img class="clickable-image" src="../images/musicmania/colour-contrast.webp" alt="A screenshot of Adobe Colors displaying the text color and background color with a contrast ratio of six point three six to one">
+                                <p class="click-to-enlarge">Click to enlarge</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <div class="page-width section-margin-padding">
+            <a class="link-text" href="../">
+                <span aria-hidden="true">← </span>Back to home
+            </a>
+        </div>
+
+
+
+    </main>
+    <footer class="page-width section-margin-padding">
+        © Kosei Oki 2024 - All rights reserved
+    </footer>
+
+    <script src="../js/js.js"></script>
+</body>
+
+</html>
